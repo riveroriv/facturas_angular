@@ -1,0 +1,18 @@
+.header{
+    height: 100px;
+    background-color: #606C38;
+    display: flex;
+}
+.container1 {
+    width: 33%;
+}
+.container2 {
+    width: 33%;
+    text-align: center;
+}
+.container3 {
+    width: 33%;
+}
+h1{
+    color: #BC6C25;
+}
