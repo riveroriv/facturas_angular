@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
+## To do list
+- create project structure
+- create pages flow (routing)
+- login
+    - user's service
+    - login component
+    - unloged redirection
+    - logout function
+- menu view
+- facturas
+    - consume factura api
+    - service's service
+    - factura's service
+    - facturas component
+    - services component
+- optional
+    - users profiles
+    - snack bar
+    - singup
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
