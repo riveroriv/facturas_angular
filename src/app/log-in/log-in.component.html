@@ -1,17 +1,27 @@
 <div class="container">
-    <div class="left-side">
-    </div>
-    <div class="right-side">
+    <div class="img"></div>
+    <div class="login">
         <h1>Fracturando</h1>
-        <form action="#" method="post">
-            <label for="username">Usuario</label>
-            <input type="text" id="username" name="username" required>
+            <mat-form-field appearance="fill">
+                <mat-label>Usuario</mat-label>
+                <input matInput 
+                    type="text" 
+                    id="username" name="username"
+                    placeholder="Placeholder" required>
+                <mat-icon matSuffix>email</mat-icon>
+                <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
             
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
-            <div style="text-align: center;">
-                <button routerLink="/general">Iniciar Sesión</button>
-            </div>
-        </form>
+            <mat-form-field appearance="fill">
+                <mat-label>Contrase&ntilde;a</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" required>
+
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar contrase&ntilde;a'" [attr.aria-pressed]="hide">
+                  <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            
+            <button mat-flat-button routerLink="/general">Iniciar Sesión</button>
+            
     </div>
 </div>
