@@ -9,6 +9,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ViewComponent } from './view/view.component';
 
 // MATERIALS
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -16,8 +19,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { NotfoundComponent } from './pages/notfound/notfound.component';
-import { ServiciosComponent } from './pages/servicios/servicios.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     AboutComponent,
     FooterComponent,
     NotfoundComponent,
-    ServiciosComponent
+    ServiciosComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

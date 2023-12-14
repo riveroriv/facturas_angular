@@ -1,12 +1,34 @@
-<div class="header">
-    <div class="container1">
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="mat-elevation-z5">
+        <span>Fracturando</span>
 
-    </div>
-    <div class="container2">
-        <h1>Fracturando</h1>
-    </div>
-    <div class="container3">
         
-    </div>
+        <div class="pages">
+            <button mat-button *ngFor="let link of links" routerLink="{{link.path}}">{{link.text}}</button>
+        </div>
 
-</div>
+
+        <span class="space"></span>
+
+        <button class="user-icon" mat-mini-fab aria-label="Usuario" color="primary" [matMenuTriggerFor]="menu">U</button>
+
+        <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Usuario</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>password</mat-icon>
+            <span>Contraseña</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>logout</mat-icon>
+            <span>Cerrar sesión</span>
+        </button>
+        </mat-menu>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row class="second">
+        <span class="title">{{page}}</span>
+    </mat-toolbar-row>
+</mat-toolbar>

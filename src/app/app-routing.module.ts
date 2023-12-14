@@ -5,13 +5,18 @@ import { GeneralComponent } from './pages/general/general.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
-  { path: 'about', component: AboutComponent},
-  { path: 'inicio', component: GeneralComponent},
+  { path: '', component: ViewComponent,
+    children: [
+      { path: '', redirectTo: '/inicio', pathMatch: 'full'},
+      { path: 'inicio', component: GeneralComponent},
+      { path: 'servicios', component: ServiciosComponent},
+      { path: 'about', component: AboutComponent},
+    ]
+  },
   { path: 'login', component: LogInComponent},
-  { path: 'servicios', component: ServiciosComponent},
-  { path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: '**', component: NotfoundComponent}
 ]
 
