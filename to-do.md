@@ -1,0 +1,19 @@
+## To do list
+- create project structure
+- create pages flow (routing)
+- login
+    - user's service
+    - login component
+    - unloged redirection
+    - logout function
+- menu view
+- facturas
+    - consume factura api
+    - service's service
+    - factura's service
+    - facturas component
+    - services component
+- optional
+    - users profiles
+    - snack bar
+    - singup
