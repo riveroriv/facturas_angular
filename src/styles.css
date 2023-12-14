@@ -1,4 +1,40 @@
+:root {
+    --white: #fff;
+    --black: #000;
+
+
+	--clr-primary-50: #fdf7e1;
+	--clr-primary-100: #f9eab2;
+	--clr-primary-200: #f5dc81;
+	--clr-primary-300: #f2cf4f;
+	--clr-primary-400: #f0c429;
+	--clr-primary-500: #eeba0e;
+	--clr-primary-600: #eead04;
+	--clr-primary-700: #ee9b00;
+	--clr-primary-800: #ee8a00;
+	--clr-primary-900: #ed6d00;
+    
+	--clr-primary: var(--clr-primary-700);
+
+	--clr-secondary-50: #e0f7f6;
+	--clr-secondary-100: #b2eae8;
+	--clr-secondary-200: #80dcdb;
+	--clr-secondary-300: #4fcdce;
+	--clr-secondary-400: #2bc3c6;
+	--clr-secondary-500: #01b9c0;
+	--clr-secondary-600: #04a9ae;
+	--clr-secondary-700: #0a9496;
+	--clr-secondary-800: #0b807f;
+	--clr-secondary-900: #0c5c57;
+
+    
+	--clr-secondary: var(--clr-secondary-700);
+
+}
+
 body {
     margin: 0 !important;
     font-family: 'Arial', sans-serif;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
