@@ -1,3 +1,5 @@
+# RUN WITH ROOT PRIVILEGES
+
 docker stop $(docker ps -q)
 docker rm $(docker ps -a -q)
 \rm -rf facturas_angular
