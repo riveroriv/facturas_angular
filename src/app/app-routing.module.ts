@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { FooterComponent } from './footer/footer.component';
-import { GeneralComponent } from './general/general.component';
-import { HeaderComponent } from './header/header.component';
-import { LogInComponent } from './log-in/log-in.component';
+import { AboutComponent } from './pages/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { GeneralComponent } from './pages/general/general.component';
+import { HeaderComponent } from './components/header/header.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
 import { ServicesComponent } from './services/services.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent},
-  { path: 'footer', component: FooterComponent},
-  { path: 'general', component: GeneralComponent},
-  { path: 'header', component: HeaderComponent},
-  { path: 'log-in', component: LogInComponent},
-  { path: 'services', component: ServicesComponent},
-  { path: '', redirectTo: '/log-in', pathMatch: 'full'},
+  { path: 'inicio', component: GeneralComponent},
+  { path: 'login', component: LogInComponent},
+  { path: 'servicios', component: ServicesComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: '**', component: NotfoundComponent}
 ]
 
 
