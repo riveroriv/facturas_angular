@@ -1,4 +1,4 @@
-# Carcar del la carpeta al contenedor
+# Fase de servidor
 FROM nginx:alpine
 COPY dist/facturas /usr/share/nginx/html
 EXPOSE 80
