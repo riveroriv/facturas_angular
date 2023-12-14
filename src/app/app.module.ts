@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { HeaderComponent } from './components/header/header.component';
 import { GeneralComponent } from './pages/general/general.component';
-import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +17,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +25,10 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     LogInComponent,
     HeaderComponent,
     GeneralComponent,
-    ServicesComponent,
     AboutComponent,
     FooterComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,
