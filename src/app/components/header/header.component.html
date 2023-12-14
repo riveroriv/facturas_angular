@@ -1,34 +1,39 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row class="mat-elevation-z5">
-        <span>Fracturando</span>
+    <mat-toolbar-row class="mat-elevation-z5 main row">
+        <div class="row sub-row">
+            <span>Fracturando</span>
 
         
-        <div class="pages">
-            <button mat-button *ngFor="let link of links" routerLink="{{link.path}}">{{link.text}}</button>
+            <div class="pages row" id="big">
+                <button mat-button *ngFor="let link of links" routerLink="{{link.path}}" (click)="changeSiteName(link.text)">{{link.text}}</button>
+            </div>
+
+
+            <span class="space"></span>
+
+            <button class="user-icon" mat-mini-fab aria-label="Usuario" color="primary" [matMenuTriggerFor]="menu">U</button>
+
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Usuario</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>password</mat-icon>
+                <span>Contraseña</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>logout</mat-icon>
+                <span>Cerrar sesión</span>
+            </button>
+            </mat-menu>
         </div>
-
-
-        <span class="space"></span>
-
-        <button class="user-icon" mat-mini-fab aria-label="Usuario" color="primary" [matMenuTriggerFor]="menu">U</button>
-
-        <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-            <mat-icon>person</mat-icon>
-            <span>Usuario</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>password</mat-icon>
-            <span>Contraseña</span>
-        </button>
-        <button mat-menu-item>
-            <mat-icon>logout</mat-icon>
-            <span>Cerrar sesión</span>
-        </button>
-        </mat-menu>
+        <div class="pages row sub-row" id="small">
+            <button mat-button *ngFor="let link of links" routerLink="{{link.path}}" (click)="changeSiteName(link.text)">{{link.text}}</button>
+        </div>
     </mat-toolbar-row>
 
     <mat-toolbar-row class="second">
-        <span class="title">{{page}}</span>
+        <span class="title">{{ page | titlecase }}</span>
     </mat-toolbar-row>
 </mat-toolbar>

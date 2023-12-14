@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit{
   ) {}
 
   ngOnInit(): void {
-    // this.page = this.links[this.router.url];
+    this.changeSiteName(this.router.url)
   }
 
   page: string = 'inicio';
@@ -29,4 +29,12 @@ export class HeaderComponent implements OnInit{
     {text: "servicios", path: "/servicios"},
     {text: "about", path: "/about"}
   ]
+ 
+  changeSiteName(site: string) {
+    for(let link of this.links){
+      if(site.includes(link.text)){
+        this.page = link.text;
+      }
+    }
+  }
 }

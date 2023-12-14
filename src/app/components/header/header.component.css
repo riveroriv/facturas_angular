@@ -1,9 +1,47 @@
+
 .second {
     height: 80px;
+    font-weight: 100;
+    font-size: 27px;
 }
+
+button {
+    font-size: 18px;
+}
+
 .user-icon {
     background-color: var(--white);
     color: var(--clr-primary);
     font-weight: bold;
     font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+#small {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    #big {
+        display: none;
+    }
+    #small {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .main {
+        height: 100px;
+        flex-wrap: wrap;
+    }
+    .sub-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
 }
