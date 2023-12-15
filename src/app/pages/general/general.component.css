@@ -1,0 +1,8 @@
+.general {
+    margin-top: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: var(--clr-secondary);
+    height: 60%;
+    border-radius: 40px;
+}
