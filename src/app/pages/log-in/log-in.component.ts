@@ -9,7 +9,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./log-in.component.css']
 })
 export class LogInComponent implements OnInit {
-  hide = true;
+  hide!: boolean;
+  error = false;
 
   constructor(
     private auth: AuthService,
@@ -37,6 +38,7 @@ export class LogInComponent implements OnInit {
         this.router.navigate(['/inicio'])
       },
       error: error => {
+        this.error=true;
         // snack bar
       }
     })
