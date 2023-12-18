@@ -1,47 +1,37 @@
-/* button{
-    background-color: var(--clr-secondary-900);
-    padding: 10px;
-    border-radius: 40px;
-    margin: 20px;
-}
-.servicios{
-    text-align: center;
-}
-.servicio{
-    height: 60px;
-    background-color: var(--clr-secondary);
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 40px;
+.servicios {
+    width: 60%;
+    margin: auto;
     display: flex;
-    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    justify-content: space-around;
+    align-items: center;
 }
-.component1{
-    width: 25%;
-
+.servicio {
+    margin: 30px;
+    width: 200px;
+    height: max-content;
+    transition: all 0.3s ease;
 }
-.component2{
-    width: 55%;
-    text-align: left;
-    font-size: 24px;
-
+.servicio:hover {
+    transform: scale(1.1);
 }
-.component3{
-    width: 20%;
-
+.logo {
+    width: 100%;
 }
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+.add, .form {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
-.edit{
-    font-size: 40px;
-    padding:10px;
+.input {
+    flex-grow: 1;
 }
-.delete{
-    font-size: 40px;
-    padding:10px;
-} */
+button {
+    margin: 5px;
+}

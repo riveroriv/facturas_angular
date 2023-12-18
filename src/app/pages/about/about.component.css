@@ -2,8 +2,12 @@
     margin-top: 40px;
     margin-left: 10%;
     margin-right: 10%;
-    background-color: var(--clr-secondary);
     border-radius: 40px;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .component{
     padding: 60px;
@@ -11,6 +15,7 @@
 p{
     font-size: 20px;
     line-height: 1.5;
+    text-align: justify;
 }
 h1 {
     text-align: center;

@@ -1,35 +1,39 @@
 <div class="servicios">
-    <button mat-flat-button color="primary">Agregar nuevo servicio</button>
-    <div>
-        <div>
-            <div class="servicio">
-                <div class="component1">
-                    circulo
-                </div>
-                <div class="component2">
-                    <div style="margin-top: 5px;">Tigo mama</div>
-                    <div style="margin-top: 5px;">Tigo hogar - 29384</div>
-                </div>
-                <div class="component3">
-                    <span class="material-symbols-outlined edit">edit</span>
-                    <span class="material-symbols-outlined delete">delete</span>
-                </div>
+    <div class="form">
+        <div class="add">
 
-            </div>
+            <mat-form-field class="input">
+                <mat-label>Nombre servicio</mat-label>
+                <input matInput #name maxlength="256" placeholder="Ej. CRE casa ..." >
+            </mat-form-field>
+            
+            <mat-form-field class="input">
+                <mat-label>Código cliente</mat-label>
+                <input matInput #code maxlength="256" placeholder="Ej. 189287">
+            </mat-form-field>
+
+            <mat-form-field class="input">
+                <mat-label>Empresa</mat-label>
+                <mat-select #empresa>
+                    <mat-option *ngFor="let empresa of empresas" [value]="empresa.service">{{empresa.nombre}}</mat-option>
+                </mat-select>
+            </mat-form-field>
         </div>
+        <button mat-flat-button color="primary" (click)="create(name.value, code.value, empresa.value)"><mat-icon>add</mat-icon> Añadir</button>
+        <!-- <button mat-flat-button color="primary"><mat-icon>save</mat-icon> Actualizar</button> -->
     </div>
-</div>
 
-<mat-card>
-    <div>
-        <img src="https://www.tigo.com.gt/assets/favicon/apple-touch-icon.png" alt="">
-    </div>
-    <mat-card-header>
-      <mat-card-title>Tigo mama</mat-card-title>
-      <mat-card-subtitle>Tigo hogar - 29384</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-actions align="end">
-      <button mat-icon-button><mat-icon>edit</mat-icon></button>
-      <button mat-icon-button color="warn"><mat-icon>delete</mat-icon></button>
-    </mat-card-actions>
-</mat-card>
+    <mat-card *ngFor="let servicio of servicios" class="servicio">
+        
+        <img src="/assets/img/{{servicio.service}}.png" alt="" class="logo">
+        
+        <mat-card-header>
+        <mat-card-title>{{servicio.name}}</mat-card-title>
+        <mat-card-subtitle>{{servicio.clientNumber}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions align="end">
+        <!-- <button mat-icon-button (click)="select(servicio)"><mat-icon>edit</mat-icon></button> -->
+        <button mat-icon-button color="warn" (click)="delete(servicio)"><mat-icon>delete</mat-icon></button>
+        </mat-card-actions>
+    </mat-card>
+</div>

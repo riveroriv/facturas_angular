@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit{
   links = [
     {text: "inicio", path: "/inicio"},
     {text: "servicios", path: "/servicios"},
-    {text: "about", path: "/about"}
+    {text: "acerca de nosotros", path: "/about"}
   ]
  
   changeSiteName(site: string) {

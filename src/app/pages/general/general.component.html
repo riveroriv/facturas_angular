@@ -1,4 +1,4 @@
-<div class="general">
+<!-- <div class="general">
     <div class="cont1">
         <div class="comp1">
             <h4>Monto total</h4>
@@ -25,4 +25,15 @@
     </div>
 
 
+</div> -->
+
+
+<div class="general" *ngIf="facturas">
+    <div class="servicio" *ngFor="let facturaServicio of facturas">
+        <div *ngFor="let factura of facturaServicio">
+            <h3>{{factura.servicio}}</h3>
+            <p>{{factura.emision}}</p>
+            <h4>{{factura.monto}}</h4>
+        </div>
+    </div>
 </div>
