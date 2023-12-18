@@ -1,4 +1,7 @@
-
+header {
+    position: sticky;
+    top: 0;
+}
 .second {
     height: 80px;
     font-weight: 100;

@@ -13,6 +13,9 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { ViewComponent } from './view/view.component';
 
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { TokenService } from './services/token.service';
+
 // MATERIALS
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -38,6 +41,7 @@ import {MatCardModule} from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     MatToolbarModule,
     MatFormFieldModule,
@@ -47,7 +51,13 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

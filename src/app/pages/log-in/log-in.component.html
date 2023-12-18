@@ -1,3 +1,4 @@
+<!-- (ngSubmit)="login(username.value, password.value)" -->
 <div class="container">
     <div class="img"></div>
     <div class="login">
@@ -7,21 +8,27 @@
                 <input matInput 
                     type="text" 
                     id="username" name="username"
-                    placeholder="Placeholder" required>
-                <mat-icon matSuffix>email</mat-icon>
+                    placeholder="Placeholder" required
+                    tabindex="1"
+                    #username
+                    >
+                <mat-icon matSuffix>person</mat-icon>
                 <!-- <mat-hint>Hint</mat-hint> -->
             </mat-form-field>
             
             <mat-form-field appearance="fill">
                 <mat-label>Contrase&ntilde;a</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'" required>
+                <input matInput [type]="hide ? 'password' : 'text'" required tabindex="2" #password>
 
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Ocultar contrase&ntilde;a'" [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
             </mat-form-field>
             
-            <button mat-flat-button routerLink="/inicio">Iniciar Sesión</button>
+            <button mat-flat-button
+            tabindex="3"
+            (click)="login(username.value, password.value)"
+            >Iniciar Sesión</button>
             
     </div>
 </div>
